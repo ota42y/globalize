@@ -24,6 +24,6 @@ platforms :jruby do
   end
 
   if !ENV['TRAVIS'] || %w(postgres postgresql).include?(ENV['DB'])
-    gem 'activerecord-jdbcpostgresql-adapter'
+    gem 'activerecord-jdbcpostgresql-adapter', '~> 1.3.24'
   end
 end
