@@ -16,7 +16,7 @@ end
 
 platforms :jruby do
   if !ENV['TRAVIS'] || ENV['DB'] == 'sqlite3'
-    gem 'activerecord-jdbcsqlite3-adapter'
+    gem 'activerecord-jdbcsqlite3-adapter', '~> 1.3.24'
   end
 
   if !ENV['TRAVIS'] || ENV['DB'] == 'mysql'
