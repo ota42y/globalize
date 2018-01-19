@@ -1,7 +1,0 @@
-postgres:
-  adapter: jdbcpostgresql
-  host: localhost
-  port: 5432
-  database: globalize_test
-  username: postgres
-  encoding: utf8

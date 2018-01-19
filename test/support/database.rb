@@ -8,12 +8,7 @@ module Globalize
     module Database
       extend self
 
-      if (!ENV['TRAVIS'] || %w(postgres postgresql).include?(ENV['DB'])) && RUBY_PLATFORM == 'java'
-        DATABASE_PATH = File.expand_path('../jruby_postgres_database.yml', __FILE__)
-      else
-        DATABASE_PATH = File.expand_path('../database.yml', __FILE__)
-      end
-
+      DATABASE_PATH = File.expand_path('../database.yml', __FILE__)
       GLOBALIZE_LOG = File.expand_path('../../globalize_test.log', __FILE__)
       DEFAULT_STRATEGY = :transaction
 
