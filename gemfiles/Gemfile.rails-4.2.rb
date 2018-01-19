@@ -20,7 +20,7 @@ platforms :jruby do
   end
 
   if !ENV['TRAVIS'] || ENV['DB'] == 'mysql'
-    gem 'activerecord-jdbcmysql-adapter'
+    gem 'activerecord-jdbcmysql-adapter', '~> 1.3.24'
   end
 
   if !ENV['TRAVIS'] || %w(postgres postgresql).include?(ENV['DB'])
